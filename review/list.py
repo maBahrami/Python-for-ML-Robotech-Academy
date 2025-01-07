@@ -1,3 +1,5 @@
+# list data structure is mutable; pay attention when you want to copy a list or change some values
+
 a = [1, 2, 3, 4, 5]
 b = [1, 2, "mammad", "gholi"]   # any type
 c = [1, 2, 3, [6, 5, 4], 9]     # nested list
