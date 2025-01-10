@@ -113,7 +113,7 @@ a[0] = 100      # just a willl be changed without affecting x
 # ------------------------------------------------------------
 a = np.array([[3, 6, 7, 1], [2, 6, 9, 4]])
 b = np.sort(a, axis=0)
-c = np.axis(a, axis=1)
+c = np.sort(a, axis=1)
 
 
 
