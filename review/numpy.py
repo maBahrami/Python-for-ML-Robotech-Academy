@@ -153,3 +153,18 @@ c = np.hstack((a, b))
 c = np.vstack((a, b))
 
 
+# ------------ interesting example ---------------------
+x = numpy.array([1,2,3,4]) #x
+y = numpy.array([5,6,7])   #y 
+
+x = x.reshape((-1,1))
+                    '''    array([[1],
+                                  [2],
+                                  [3],
+                                  [4]])           '''
+
+diff_matrix = x-y
+                    '''    array([[-4, -5, -6],
+                                  [-3, -4, -5],
+                                  [-2, -3, -4],
+                                  [-1, -2, -3]])         '''
