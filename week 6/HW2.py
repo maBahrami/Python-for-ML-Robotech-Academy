@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+'''
 print("\n---------- part a ---------------------")
 A = np.reshape(np.arange(0, 9), [3, 3])
 print(A)
@@ -46,10 +46,48 @@ print()
 print(H2)
 
 print("\n---------- part i ---------------------")
-
+I = np.reshape(np.arange(0, 256), [16, 16])
+print(I)
+for i in range(0, 13):
+    for j in range(0, 13):
+        I2 = I[i:i+4, j:j+4]
+        #print(I2)
+        print(I2.sum())
 
 
 print("\n---------- part j ---------------------")
+J = np.zeros((5, 5))
+for i in range(5):
+    J[i] = np.random.randint(low = 0, high = 4, size = 5)
+print(J)
+print(max)
 
 
 print("\n---------- part k ---------------------")
+k = np.random.randint(low = 0, high = 24, size = 25)
+K = np.reshape(k, [5, 5])
+print(K)
+n = int(input("enter k: "))
+q = 0
+for i in K:
+    print(f"the {n} maxima of the {q}th row are: ", end="\t")
+    for j in range(n):
+        i = list(i)
+        m = max(i)
+        print(f"{m}", end="\t")
+        i.remove(m)
+    print()
+    q += 1
+
+'''
+
+print("\n---------- part l ---------------------")
+x = np.array([1, 2, 3])
+y = np.array([4, 8, 9, 7])
+
+x = x.reshape((-1, 1))
+
+diff = x - y
+cauchy = 1.0 / diff
+
+print(cauchy)
