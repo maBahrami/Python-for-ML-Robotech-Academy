@@ -38,3 +38,21 @@ print(ct[ct >= ct.mean()])
 
 '''
 # ---------------------------- Data Frame --------------------------------------------
+d = {"w":[60, 70, 80], "h":[1.7, 1.8, 1.9]}
+
+df = pd.DataFrame(d)
+
+print(df)
+
+print(df.shape)
+
+print(df.columns)
+
+print(df.index)
+
+print(df.values)
+
+# ---------------- converting to numpy array -------------
+import numpy as np
+dataset = np.array(df.values)
+
