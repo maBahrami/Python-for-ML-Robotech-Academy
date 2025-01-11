@@ -38,10 +38,10 @@ print(ct[ct >= ct.mean()])
 
 '''
 # ---------------------------- Data Frame --------------------------------------------
-d = {"w":[60, 70, 80], "h":[1.7, 1.8, 1.9]}
+d = {"w":[60, 70, 80, 65], "h":[1.7, 1.8, 1.9, 1.3], "wrist":[12, 15, 18, 11]}
 
 df = pd.DataFrame(d)
-
+'''
 print(df)
 
 print(df.shape)
@@ -55,4 +55,47 @@ print(df.values)
 # ---------------- converting to numpy array -------------
 import numpy as np
 dataset = np.array(df.values)
+
+# ---------------- head and tail preview ---------------------------------
+print(df.head(2))
+
+print(df.tail(2))
+
+df.info()
+
+print(df.describe())
+
+
+# ------------------------- access to columns ------------------------
+print(df["w"])
+
+print(df.h)
+
+print(df["h"] > 1.8)
+
+
+
+# ----------------------  iloc method  ---------------------------
+print(df)
+
+print(df.iloc[0, 0])
+
+print(df.iloc[1:, :2])
+
+print(df.iloc[[0, 2], [0, 1]])
+
+print(df.iloc[[True, False, True, False], ["w", "wrist"]])
+'''
+
+# ----------------------  loc method  ---------------------------
+print(df)
+
+print(df.loc[1, "w"])
+
+print(df.loc[1:3, "w":"wrist"])
+
+print(df.loc[[0, 2], ["w", "wrist"]])
+
+
+
 
