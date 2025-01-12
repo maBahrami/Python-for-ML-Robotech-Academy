@@ -85,7 +85,7 @@ print(df.iloc[1:, :2])
 print(df.iloc[[0, 2], [0, 1]])
 
 print(df.iloc[[True, False, True, False], ["w", "wrist"]])
-'''
+
 
 # ----------------------  loc method  ---------------------------
 print(df)
@@ -96,6 +96,37 @@ print(df.loc[1:3, "w":"wrist"])
 
 print(df.loc[[0, 2], ["w", "wrist"]])
 
+'''
+# ---------------------- csv handling -----------------------------
+
+import pandas as pd
+
+df = pd.read_csv(r"C:\Users\mabah\Desktop\Python\Robotec\week 7\dataset\iris.csv")
+
+# df = pd.read_csv(r"PATH", sep = "\t")
+
+'''
+df = pd.read_csv(r"week 7\dataset\m_iris.csv", header = None,
+                  names = ["sl", "sw", "pl", "pw", "v"],
+                  skiprows = 2,
+                  comment = "#")
+
+'''
 
 
+#labels = df.iloc[:, 4]
+
+#features = df.iloc[:, :4]
+
+#print(labels.head(10))
+
+#print(features.head(10))
+
+#print(df.head())
+
+
+print(df.columns)
+
+
+# df = pd.read_csv(r"PATH", usecols = ["variety", "sepal.width"])
 
